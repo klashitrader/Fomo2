@@ -1,0 +1,20 @@
+Add telegram_bot.py and requirements.txt to the ROOT of your existing GitHub repository.
+
+Render:
+1. Dashboard → New + → Background Worker.
+2. Connect the GitHub repository containing telegram_bot.py.
+3. Runtime: Python 3.
+4. Build Command: pip install -r requirements.txt
+5. Start Command: python telegram_bot.py
+6. Environment variables:
+   TELEGRAM_BOT_TOKEN = your private @BotFather token
+   TELEGRAM_CHAT_ID = 8999861771
+7. Create the worker / deploy.
+8. In Telegram, message your bot /start and /status.
+
+Never commit your BotFather token to GitHub. If it was exposed, revoke it with
+@BotFather and create a new one.
+
+Scope: this is a Telegram messaging bridge only. It does not connect to live
+FOMO trader data, rank live wallets, or execute trades. trader_discovery.py
+remains a separate CSV ranking utility.
